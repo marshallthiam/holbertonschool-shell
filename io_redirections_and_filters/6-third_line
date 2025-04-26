@@ -1,0 +1,8 @@
+#!/bin/bash
+# Display the third line of the file 'iacta'
+
+if [ -f "iacta" ]; then
+    sed -n '3p' iacta
+else
+    echo "File 'iacta' not found."
+fi
