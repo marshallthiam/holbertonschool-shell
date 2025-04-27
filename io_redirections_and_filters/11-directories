@@ -1,0 +1,4 @@
+#!/bin/bash
+
+count=$(find . -type d ! -name '.' | wc -l)
+echo "Number of directories (including hidden ones): $count"
