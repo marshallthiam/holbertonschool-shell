@@ -1,0 +1,12 @@
+import os
+
+# Define the path
+directory_path = '/tmp/my_first_directory'
+
+# Check if the directory already exists
+if not os.path.exists(directory_path):
+    # Create the directory
+    os.mkdir(directory_path)
+    print(f"Directory '{directory_path}' created successfully.")
+else:
+    print(f"Directory '{directory_path}' already exists.")
