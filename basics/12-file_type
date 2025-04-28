@@ -1,0 +1,18 @@
+import os
+import mimetypes
+
+# Define the file path
+file_path = '/tmp/iamafile'
+
+# Check if the file exists
+if os.path.exists(file_path):
+    # Get the MIME type of the file
+    mime_type, _ = mimetypes.guess_type(file_path)
+    
+    # Print the type of the file
+    if mime_type:
+        print(f"The file type is: {mime_type}")
+    else:
+        print("Could not determine the file type.")
+else:
+    print(f"The file {file_path} does not exist.")
