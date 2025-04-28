@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd "$(getent passwd "$(id -u)" | cut -d: -f6)" || { echo "Failed to change directory to home"; exit 1; }
+
