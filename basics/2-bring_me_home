@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Get the user's home directory from /etc/passwd
+home_dir=$(getent passwd "$(whoami)" | awk -F: '{print $6}')
+
+# Change to the home directory
+cd "$home_dir" || { echo "Failed to change directory"; exit 1; }
+
+# Print the current working directory to verify
+pwd
