@@ -1,0 +1,9 @@
+import os
+
+# Store the current working directory
+previous_directory = os.getcwd()
+
+# Change the working directory to the previous one
+os.chdir(previous_directory)
+
+print(f"Current working directory is now: {os.getcwd()}")
