@@ -1,0 +1,7 @@
+/mnt/data/
+├── project1/
+│   ├── main.py
+│   ├── requirements.txt
+├── report.docx
+├── image.png
+├── notes.txt
