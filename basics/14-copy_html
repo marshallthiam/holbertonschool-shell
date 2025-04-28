@@ -1,0 +1,32 @@
+import os
+import shutil
+from datetime import datetime
+
+# Get the current working directory and parent directory
+current_dir = os.getcwd()
+parent_dir = os.path.dirname(current_dir)
+
+# List all the HTML files in the current directory
+html_files = [f for f in os.listdir(current_dir) if f.endswith('.html')]
+
+# Loop through each HTML file
+for html_file in html_files:
+    # Get the full path of the current file and the corresponding file in the parent directory
+    current_file_path = os.path.join(current_dir, html_file)
+    parent_file_path = os.path.join(parent_dir, html_file)
+
+    # Check if the file exists in the parent directory
+    if not os.path.exists(parent_file_path):
+        # If it doesn't exist in the parent directory, copy it
+        shutil.copy2(current_file_path, parent_file_path)
+        print(f"Copied {html_file} to the parent directory.")
+    else:
+        # If it exists, compare the modification times
+        current_file_time = os.path.getmtime(current_file_path)
+        parent_file_time = os.path.getmtime(parent_file_path)
+
+        if current_file_time > parent_file_time:
+            # If the current file is newer, copy it
+            shutil.copy2(current_file_path, parent_file_path)
+            print(f"Updated {html_file} in the parent directory.")
+        else:
