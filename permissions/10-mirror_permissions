@@ -1,5 +1,0 @@
-#!/bin/bash
-mode=$(stat -c "%a" olleh)
-# Apply that mode to hello
-chmod "$mode" hello
-

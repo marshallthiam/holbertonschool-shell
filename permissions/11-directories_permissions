@@ -1,8 +1,0 @@
-#!/bin/bash
-for item in *; do
-  # Check if it's a directory
-  if [ -d "$item" ]; then
-    chmod a+x "$item"
-  fi
-done
-

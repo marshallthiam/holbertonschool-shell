@@ -1,4 +1,0 @@
-#!/bin/bash
-
-# List files sorted by modification time, newest first, and display the top 10
-ls -tp | grep -v '/$' | head -n 10

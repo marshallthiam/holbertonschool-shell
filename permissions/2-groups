@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Get the current user
-USER_NAME=$(whoami)
-
-# Print the groups the user is part of
-echo "Groups for user $USER_NAME:"
-groups $USER_NAME
-
