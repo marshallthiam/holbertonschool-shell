@@ -1,0 +1,4 @@
+#!/bin/bash
+./reverse.sh
+Enter text to reverse: hello
+olleh
